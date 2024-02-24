@@ -108,26 +108,37 @@ text-align: center;
 
 
 <div class="main">
-<div class="container">
-    <div id="search-bar">
-        <input type="text" id="search-input" placeholder="Enter your role number">
-        <button class="btn btn-primary" id="search-button" onclick="openStudentPage()">Search</button>
+    <div class="container">
+        <div id="search-bar">
+            <input type="text" id="search-input" placeholder="Enter your role number">
+            <button class="btn btn-primary" id="search-button" onclick="openStudentPage()">Search</button>
+        </div>
+    
+        <!-- Your main body content goes here -->
+    
     </div>
-
-    <!-- Your main body content goes here -->
-
-</div>
-</div>
-
-<!-- Bootstrap JS and Popper.js -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script>
-    function openStudentPage() {
-        window.open('student1.html');
-    }
-</script>
+    </div>
+    
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        function openStudentPage() {
+            var roleNumber = document.getElementById('search-input').value;
+            
+            if (roleNumber === '9162254') {
+                window.open('student1.html');
+            } else if (roleNumber === '9132225') {
+                window.open('student2.html');
+            } 
+            // Continue with else if for other specific role numbers you have
+            else {
+                alert('Invalid role number or no page available for this role number.');
+            }
+        }
+    </script>
+    
 
 
 
